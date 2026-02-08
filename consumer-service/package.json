@@ -1,0 +1,39 @@
+{
+  "name": "consumer-service",
+  "version": "0.0.1",
+  "author": "Oleksii Salimonenko",
+  "private": true,
+  "license": "ISC",
+  "scripts": {
+    "build": "nest build",
+    "format": "prettier --write \"$npm_package_config_tsFiles\"",
+    "format:check": "prettier --check \"$npm_package_config_tsFiles\"",
+    "start": "nest start",
+    "start:dev": "cross-env NODE_ENV=development nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "lint": "eslint \"$npm_package_config_tsFiles\"",
+    "lint:fix": "eslint \"$npm_package_config_tsFiles\" --fix"
+  },
+  "config": {
+    "tsFiles": "{src,test}/**/*.ts"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.1.13",
+    "@nestjs/config": "^4.0.3",
+    "@nestjs/core": "^11.1.13",
+    "@nestjs/microservices": "^11.1.13",
+    "@nestjs/platform-fastify": "^11.1.13",
+    "joi": "^18.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.1",
+    "cross-env": "^10.1.0",
+    "dotenv-cli": "^11.0.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

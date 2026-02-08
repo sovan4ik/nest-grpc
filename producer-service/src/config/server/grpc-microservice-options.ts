@@ -2,7 +2,7 @@ import { GrpcOptions, Transport } from '@nestjs/microservices';
 import { join } from 'path';
 import _CONFIG from '..';
 
-const PROTO_DIR = join(process.cwd(), '../@lib/proto');
+const PROTO_DIR = join(process.cwd(), '@lib/proto');
 
 export const grpcMicroserviceOptions: GrpcOptions = {
   transport: Transport.GRPC,

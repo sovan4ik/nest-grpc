@@ -1,9 +1,10 @@
 import { Logger, Module } from '@nestjs/common';
 import { ConfigModule } from './config/config.module';
+import { CommonModule } from './modules/common/common.module';
 import { GrpcModule } from './modules/grpc/grpc.module';
 
 @Module({
-  imports: [ConfigModule, GrpcModule],
+  imports: [ConfigModule, CommonModule, GrpcModule],
   providers: [Logger],
 })
 export class AppModule {}

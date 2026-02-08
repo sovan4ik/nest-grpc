@@ -91,6 +91,13 @@ This approach makes it easy to:
 - No HTTP endpoints are provided
 
 ---
+## Docker Compose notes
+
+gRPC server (producer) listens on `0.0.0.0`, but gRPC client (consumer) connects via the Docker service name (`producer:50051`).
+
+Healthchecks are required for proper startup order; if a service stays in Waiting state, check its `/health` endpoint and ensure curl is installed in the image.
+
+---
 
 ## Tech Stack
 
